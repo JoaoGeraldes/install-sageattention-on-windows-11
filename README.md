@@ -1,7 +1,10 @@
 # ComfyUI & SageAttention Setup on Windows
 
+This document provides a step-by-step guide for accessing the ComfyUI Python environment, installing required libraries (such as Triton), enabling Sage Attention in ComfyUI, and addressing Windows-specific issues.
+
+
 ## Table of Contents
-1. [Accessing Python Environment in ComfyUI](#accessing-python-environment-in-comfyui)
+1. [Install steps](#install-steps)
 2. [Understanding Python Virtual Environments](#understanding-python-virtual-environments)
 3. [Checking Installed Versions](#checking-installed-versions)
 4. [Best Practices](#best-practices)
@@ -54,6 +57,8 @@ Example:
 
 ```cmd
 python -m pip install <package-name>
+
+# Assuming you are already in the desired python environment (in our case ComfyUI)
 ```
 
 ---
@@ -67,7 +72,7 @@ where python
 <your ComfyUI directory>\.venv\Scripts\python.exe
 ```
 
-## Best Practices
+## Best Practices (assumes you already in the desired environment)
 
 - Always use `python -m pip` inside the venv.  
 - Verify which Python your venv is using:
@@ -81,9 +86,6 @@ python -m pip --version
 - Restart ComfyUI after installing SageAttention or other new packages.  
 
 ---
-
-This document provides a **step-by-step reference** for accessing the ComfyUI Python environment, installing necessary libraries, and handling Windows-specific issues.
-
 
 
 
