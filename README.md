@@ -5,13 +5,13 @@ This document provides a step-by-step guide for accessing the ComfyUI Python env
 
 ## Table of Contents
 1. [Install steps](#install-steps)
-2. [Understanding Python Virtual Environments](#understanding-python-virtual-environments)
-3. [Checking Installed Versions](#checking-installed-versions)
-4. [Best Practices](#best-practices)
+2. [Understanding Python Virtual Environments](PYTHON_ENV_VAR.md)
+3. [Best Practices](#best-practices)
+4. [Troubleshooting](TROUBLESHOOTING.md)
 
 ---
 
-## Install steps 
+## 🚀 Install steps 
 
 1. Navigate to your ComfyUI folder via  command line / terminal:
 
@@ -47,56 +47,13 @@ cd <your ComfyUI directory>
    python -m pip install sageattention==1.0.6
    ```
 
+## 💡 Best Practices (assumes you already in the desired environment)
 
-## Understanding Python Virtual Environments (Nice to know)
-
-- (✅ This is what we want) Using `python -m pip install` ensures that **we are using pip within the desired environment (which in this case is ComfyUI)**. 
-- (❌ We don't want to do this - This will install globally on your machine) Direct `pip install` can accidentally install packages in the global Python installation.
-
-Example:
-
-```cmd
-python -m pip install <package-name>
-
-# Assuming you are already in the desired python environment (in our case ComfyUI)
-```
-
----
-
-# Check where are your python executables
-```cmd
-where python
-```
-- Should return something like (in the first line):
-```
-<your ComfyUI directory>\.venv\Scripts\python.exe
-```
-
-## Best Practices (assumes you already in the desired environment)
-
-- Always use `python -m pip` inside the venv.  
-- Verify which Python your venv is using:
-
-```cmd
-where python
-python -m pip --version
-```
-
+- Always use `python -m` prefix inside the environment to prevent using `pip` or `python` on the global scope (machine).  
+- Verify which Python your environment is using:
 - Close any Python processes before installing compiled libraries.  
 - Restart ComfyUI after installing SageAttention or other new packages.  
 
----
 
-
-
-
-# Troubleshooting:
-**ERROR: Could not install packages due to an OSError: [WinError 5] Access is denied: ... Check the permissions.**
-
-Make sure you don't have ComfyUI running otherwise thie error may occur.
-
-**In ComfyUI, errors regarding CUDA are popping up** 
-
-Assuming you are using NVIDA GPU you might have to install the CUDA Toolkit. Take a look at this link ComfyUI might fail after installation, missing CUDA. Go ahead and install [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit)
 
 
