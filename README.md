@@ -52,7 +52,7 @@ cd <your ComfyUI directory>
 - Always use `python -m` prefix inside the environment to prevent using `pip` or `python` on the global scope (machine).  
 - Verify which Python your environment is using:
 - Close any Python processes before installing compiled libraries.  
-- Restart ComfyUI after installing SageAttention or other new packages.  
+- Restart ComfyUI after installing SageAttention or any other packages.  
 
 
 
