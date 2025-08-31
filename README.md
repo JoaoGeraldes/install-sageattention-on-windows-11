@@ -47,6 +47,8 @@ cd <your ComfyUI directory>
    python -m pip install sageattention==1.0.6
    ```
 
+5. Done ✅
+
 ## 💡 Best Practices (assumes you already in the desired environment)
 
 - Always use `python -m` prefix inside the environment to prevent using `pip` or `python` on the global scope (machine).  
